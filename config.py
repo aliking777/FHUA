@@ -19,5 +19,5 @@ contact_filter = filters.create(
     or message.outgoing
 )
 
-bot = Client(SESSION, API_ID, API_HASH, plugins=dict(root="NovaMusic"))
+bot = Client(SESSION, API_ID, API_HASH, plugins=dict(root="MusicCOBRA"))
 call_py = PyTgCalls(bot)

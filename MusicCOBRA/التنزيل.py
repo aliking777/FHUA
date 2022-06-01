@@ -67,6 +67,7 @@ async def song(client, message: Message):
     capy = f"""
 **🏷️ إسم الأغنية :** [{thum}]({mo})
 **🎧 طلب تنزيل من :** {message.from_user.mention}
+**By** : @VFF35
 """
     file_stark = f"{ytdl_data['id']}.mp3"
     await client.send_audio(
@@ -230,7 +231,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-@Client.on_message(filters.command(["فيد", "تحميل_فيديو"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["فيد", "تحميل_فيد"], prefixes=f"{HNDLR}"))
 async def vsong(client, message: Message):
     urlissed = get_text(message)
 
@@ -275,6 +276,7 @@ async def vsong(client, message: Message):
     capy = f"""
 **🏷️ اسم الفيديو :** [{thum}]({mo})
 **🎧 طلب تحميله من:** {message.from_user.mention}
+**By** : @VFF35
 """
     await client.send_video(
         message.chat.id,
